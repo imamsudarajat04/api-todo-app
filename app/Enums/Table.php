@@ -13,4 +13,5 @@ enum Table: string
     case JOB_BATCHES = 'job_batches';
     case FAILED_JOBS = 'failed_jobs';
     case TODOS = 'todos';
+    case GENERATED_PHONE_NUMBERS = 'generated_phone_numbers';
 }
