@@ -36,7 +36,6 @@
                 <tr class="bg-gray-100">
                     <th class="border px-4 py-2">Nomor</th>
                     <th class="border px-4 py-2">Provider</th>
-                    <th class="border px-4 py-2">Status</th>
                     <th class="border px-4 py-2 text-center">Aksi</th>
                 </tr>
             </thead>
@@ -45,13 +44,6 @@
                 <tr>
                     <td class="border px-4 py-2">{{ $phone->number }}</td>
                     <td class="border px-4 py-2">{{ $phone->provider }}</td>
-                    <td class="border px-4 py-2">
-                        @if ($phone->is_active)
-                            <span class="text-green-600 font-bold">Aktif</span>
-                        @else
-                            <span class="text-red-600">Tidak Aktif</span>
-                        @endif
-                    </td>
                     <td class="border px-4 py-2 text-center">
                         <a
                             href="https://wa.me/{{ ltrim(preg_replace('/^0/', '62', $phone->number)) }}"
